@@ -7,49 +7,82 @@ Most recent revision: 9/17/2018
 <html lang="en">
 <head>
 <title>Nichole Allen's Portfolio</title>
+<link href="styles/main.css" rel="stylesheet" type="text/css" />
+<style>
+caption {
+   font-weight: bold;
+   font-size: 1.2em;
+   margin-bottom: 8px;
+}
+table, th, td {
+    border: 1px solid #0d1f2d;
+	border-collapse: collapse;
+	padding: 5px 10px;
+}
+table {
+    width: 90%;
+	margin: auto;
+}
+tr {
+    height: 30px;
+}
+th {
+    background-color: #546a7b;
+	color: #f2eded;	
+}   
+tr:nth-child(odd) {
+    background-color: #e4c3ad; 
+}
+article img {
+    height: 400px;
+    width: 300px;
+   float:left;
+}
+.right-content {
+    float:left;
+}
+article {
+    margin-bottom: 16px;
+}
+
+</style>
 </head>
 <body>
 <header>
 <h1>Portfolio for Nichole Allen</h1>
 </header>
-<hr />
-<nav> <!-- The nav element will include navigation buttons or links -->
-    <hr /> 
+<nav class="border"> <!-- The nav element will include navigation buttons or links -->
     <p><a href="projects.html">Projects</a></p>
-    <hr />
+    <p><a href="contact.html">Contact Me</a></p>
+    <p><a href="testimonials.html">Testimonials</a></p>  
+	<div class="clear-float"></div>
 </nav>
-<nav> <!-- The nav element will include navigation buttons or links -->
-    <hr /> 
-    <p><a href="contact.html">Contact</a></p>
-    <hr />
-</nav>
-<nav> <!-- The nav element will include navigation buttons or links -->
-    <hr /> 
-    <p><a href="testimonials.html">Testimonials</a></p>
-    <hr />
-</nav>
-<hr />
 <section>
-<article id="about-me">
+<article class="border" id="about" >
 <h2><em> About Me </em></h2>
 <img src="images/professional-photo.jpg" alt="Portrait of Nichole Allen" />
 <p> My name is Nichole Allen and I was born and raised in <b>Berryville, Arkansas.</b> I just graduated from the University of Arkansas
 in <b>May of 2018 </b> with a degree in <b>Information Systems</b> with a concentration in <b>Business Analytics. </b></p>
 <p> I love analyzing data and learning about <b>coding. </b> I really enjoy being able to solve problems in both a professional and 
 personal setting. </p>
+<div class="clear-float"></div>
 </article>
 </section>
 <section>
-<article id="past-experiences">
+<article class="border" id="experience">
 <h2><em>Past Experiences </em></h2>
 <img src="images/our-unity-note.jpg" alt="Layout of community service website." />
+<div class="right-content">
 <table>
 <caption>Employment History </caption>
+<thead>
 <tr>
 <th> Years of Employment</th>
 <th>Title</th>
 <th>Company</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>2014-2018</td>
 <td>Student</td>
@@ -65,13 +98,17 @@ personal setting. </p>
 <td>Web Specialist</td>
 <td>Kerusso</td> 
 </tr>
+</tbody>
 </table>
+</div>
+<div class="clear-float"></div>
 </article>
 </section>
 <section>
 <article id="hobbies">
 <h2><em> Hobbies </em></h2>
 <img src="images/shinee-art.jpg" alt="An example of one of my pieces of art." />
+<div class="right-content">
 <ul>
 <li>Authors</li>
 <ol>
@@ -100,6 +137,8 @@ personal setting. </p>
 <li>Persona</li>
 </ul>
 </ul>
+</div>
+<div class="clear-float"></div>
 </article>
 </section>
 <footer>

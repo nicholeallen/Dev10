@@ -1,0 +1,39 @@
+/*
+Creator: Nichole Allen
+Date created: 9/23/2018
+Date last modified:9/23/2018
+*/
+header, footer {
+    background-color: #90ee90;
+    color: #8b4513;
+	text-align: center;
+	padding: 15px 5px 55px 5px;
+}
+.clear-float {
+    clear:both;
+}
+
+nav a {
+    background-color: #90ee90;
+    color: #8b4513;
+    padding: 20px;
+    text-align: center;
+	display: block;
+	margin: 10px;
+	width: 100px;
+	float: left;
+}
+
+h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+nav a:visited {
+    color: #ff7523; 
+}
+nav a:hover {
+	font-weight: bold; 
+}
+nav a:active {
+    text-decoration: none;
+}
