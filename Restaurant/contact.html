@@ -8,7 +8,12 @@ Most recent revision: 9/21/2018
 <head>
 <title>Contact Us</title>
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+<script type="text/JavaScript" src="styles/restaurantJavaScript.js"></script>
+
 <style>
 body {
     background-color: #008b8b;
@@ -29,49 +34,84 @@ body {
 </header>
 <hr />
 <nav>
-    <a href="home.html">Home</a>
+     <a class="btn badge-pill" href="home.html"><i class="fas fa-home"></i> Home </a>
 
-    <a href="menu.html">Menu</a>
+    <a class="btn badge-pill" href="menu.html">Menu</a>
 
-    <a href="contact.html">Contact Us</a>
+    <a class="btn badge-pill" href="contact.html">Contact Us</a>
 <div class="clear-float"></div>
 </nav>
 <hr />
 <body>
-<form action="submit.html" method="POST">
-<label for="name"><b>Name:</b></label> 
-<input type="text" id="Name" name="name"> <br /><br />
-<label for="email"><b>Email:</b></label>
-<input type="text" id="Email" name="email"> <br /><br />
-<label for="phone"><b>Phone:</b></label>
-<input type="text" id="phone" name="phone"> <br /><br />
-<label for="inquiry"><b>Reason for Inquiry:</b></label>
-<select id="inquiry" name="inquiry">
-<option value="default" selected>Catering</option>
-<option value="party">Private Party</option>
-<option value="feedback">Feedback</option>
-<option value="other">Other</option> 
-</select><br /><br />
-<label for="info">Additional Information:</label>
-<textarea id="info" name="info"></textarea> <br /><br />
-<label for="customer"><b>Have you been to the restaurant?</b></label>
-<input type="radio" id="choice1" name="questionnaire" value="default">
-<label for="choice1">No</label>
-<input type="radio" id="choice2" name="questionnaire" value="no">
-<label for="choice2">Yes</label><br /><br />
-<label for="days">Best days to contact you:</label>
-<input type="checkbox" id="monday" name="day" value="monday">
-<label for="monday">M</label>
-<input type="checkbox" id="tuesday" name="day" value="tuesday">
-<label for="tuesday">T</label>
-<input type="checkbox" id="wednesday" name="day" value="wednesday">
-<label for="wednesday">W</label>
-<input type="checkbox" id="thursday" name="day" value="thursday">
-<label for="thursday">Th</label>
-<input type="checkbox" id="friday" name="day" value="friday">
-<label for="friday">F</label> <br /><br />
-<input type="submit" name="submit" value="Send Request">
+<noscript>
+      <div style="border: 1px solid purple; padding: 10px">
+        <span style="color:red">JavaScript is not enabled! Site is best viewed with JavaScript enabled.</span>
+      </div>
+</noscript>
+<div class="container">
+<form name="contact" method="post" onsubmit="return validateItems();">
+<div class="form-group col-xs-3">
+    <label for="cName"><b>Name:</b></label>
+    <input type="text" class="form-control" id="cName">
+  </div>
+<div class="form-group col-xs-3">
+    <label for="email"><b>Email:</b></label>
+    <input type="email" class="form-control" id="email">
+  </div>
+<div class="form-group col-xs-3">
+    <label for="phone"><b>Phone:</b></label>
+    <input type="text" class="form-control" id="phone">
+  </div>
+<div class="form-group col-xs-3">
+      <label for="inquiry"><b>Reason for Inquiry:</b></label>
+      <select id="inquiry" class="form-control">
+        <option selected>Catering</option>
+        <option> Private Party</option>
+		<option> Feedback</option>
+		<option> Other</option>
+      </select>
+   </div>
+ <div class="row">
+<div class="form-group col-lg-6>
+  <label for="info">Additional Information:</label>
+  <textarea class="form-control" rows="5" id="info"></textarea>
+</div> 
+</div>
+<label class="row-inline"><b>Have you been to the restaurant?</ b></label>
+<div class="radio-inline">
+  <label><input type="radio" name="optradio" checked>No</label>
+</div>
+<div class="radio-inline">
+  <label><input type="radio" name="optradio">Yes</label>
+</div>
+<br /> <br />
+<label class="row-inline">Best days to contact you:</label>
+<div class="checkbox-inline">
+  <label><input type="checkbox" value="monday">M</label>
+</div>
+<div class="checkbox-inline">
+  <label><input type="checkbox" value="tuesday">T</label>
+</div>
+<div class="checkbox-inline">
+  <label><input type="checkbox" value="wednesday">W</label>
+</div>
+<div class="checkbox-inline">
+  <label><input type="checkbox" value="thursday">Th</label>
+</div>
+<div class="checkbox-inline">
+  <label><input type="checkbox" value="friday">F</label>
+</div>
+<br /> <br />
+<button type="submit" id="submitButton" class="btn btn-primary">Send Request</button>
+<br /> <br />
 </form>
+</div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 </body>
 <footer> 
 <hr />

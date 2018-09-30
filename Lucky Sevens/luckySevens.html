@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Name: Nichole Allen
+Date Created: 9/25/2018
+Most recent revision: 9/26/2018
+-->
+<html>
+<head>
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {
+	margin: 0 auto;	
+	text-align: center;
+
+	
+}
+
+.container {
+
+    width: 2000px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+	padding-left: 425px;
+}
+
+#startingBet {
+    
+    max-width: 15em;
+    
+}
+
+
+#results {
+    width: 100%;
+    max-width: 20em;
+    margin:auto;
+}
+	
+</style>
+</head>
+<body>
+
+    <h1>Lucky Sevens</h1>
+	<div class = "container">
+	<div class="form-group">
+    <form name="luckySevens" onsubmit="return game();">
+	 <div class="row">
+	  <div class="controls form-inline">
+            <div class="form-group col-xs-4">
+             <label for="startingBet">Starting Bet:</label>
+			 <input type="number" min="0.01" step="0.01" class="form-control" id="startingBet" placeholder="$0.00"> 
+			</div>
+		</div>
+			</div>
+			</div>
+			</div>
+            <button type="submit" id="playButton" class="btn btn-default">Play</button>
+
+    </form>
+	<hr />
+    <table id="results" class="table table-striped" style="display:none;">
+        <thead>
+            <tr>
+                <th colspan="2">Results</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Starting Bet</td>
+                <td><span id="bet"></span></td>
+            </tr>
+            <tr>
+                <td>Total Rolls Before Going Broke</td>
+                <td><span id="rolls"></span></td>
+            </tr>
+            <tr>
+                <td>Highest Amount Won</td>
+                <td><span id="highestMoney"></span></td>
+            </tr>
+            <tr>
+                <td>Roll Count at Highest Amount Won</td>
+                <td><span id="moneyRoll"></span></td>
+            </tr>
+        </tbody>
+    </table>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</body>
+</html>
